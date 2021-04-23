@@ -117,7 +117,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 10%;
-    height: 40px;
+    height: 30px;
     border: 1px solid #ccc;
     border-right: none;
     background: #fff;
@@ -134,7 +134,7 @@ body {
 
 .search .search-text {
     width: 100%;
-    height: 40px;
+    height: 30px;
     padding-left: 10px;
     font-size: 12px;
     border: 1px solid #ccc;
@@ -146,6 +146,28 @@ body {
 .search .search-text:hover,
 .search .search-text:focus {
     background: #fff;
+}
+
+/* MAIN SIDE */
+
+.main-side img {
+    width: 50px;
+    margin: 0 10px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.user-chat {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.user-chat:last-child {
+    border-bottom: none;
+}
+
+.user-chat:hover {
+    background: #ccc;
 }
 
 /* CONTENT */
@@ -219,8 +241,8 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-top: 20px;
-    padding-right: 50px;
+    padding-top: 40px;
+    padding-right: 80px;
 }
 
 .wrapper-message-sent .message-sent {
@@ -248,7 +270,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 50px;
+    padding-left: 80px;
 }
 
 .wrapper-message-received .message-received {
