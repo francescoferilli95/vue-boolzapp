@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 body {
@@ -38,7 +39,33 @@ body {
 }
 
 .header-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #ededed;
     border-right: 1px solid #d1d1d1;
+}
+
+.header-side .user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.header-interactions i {
+    font-size: 20px;
+    color: #bababa;
+}
+
+.header-interactions i:nth-child(2) {
+    margin: 0 15px;
+}
+
+.header-interactions i:last-child {
+    padding-right: 10px;
 }
 
 .notifications {
@@ -62,16 +89,108 @@ body {
     background: #aaa;
 }
 
-.header-content,
-.footer-content,
-.header-side {
-    padding: 35px;
+
+/* HEADER CONTENT */
+
+.header-content {
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 10px;
     background: #ededed;
 }
+
+.chat-name {
+    display: flex;
+}
+
+.chat-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.log {
+    font-size: 14px;
+    color: #9a9fa1;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.header-content .chat-name img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.header-content i {
+    font-size: 20px;
+    color: #bababa;
+}
+
+.header-content i:nth-child(2) {
+    margin: 0 15px;
+}
+
+.header-content i:last-child {
+    padding-right: 10px;
+}
+
+/* MAIN CONTENT */
 
 .main-content {
     flex-grow: 1;
     padding: 20px;
     overflow-y: auto;
     background-image: url(../img/mine.jpg);
+}
+
+/* FOOTER CONTENT */
+
+.footer-content {
+    display: flex;
+    padding: 10px;
+    background: #ededed;
+}
+
+.footer-content .emoji {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+
+.footer-content .chat {
+    flex-grow: 1;
+}
+
+.footer-content .chat-input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 10px;
+    background: rgba(255,255,255, .7);
+    transition: background .3s;
+}
+
+.footer-content .chat-input:hover,
+.footer-content .chat-input:focus {
+    background: #fff;
+}
+
+.footer-content .audio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+
+.footer-content .emoji i,
+.footer-content .audio i {
+    font-size: 25px;
+    color: #8d9294;
 }
