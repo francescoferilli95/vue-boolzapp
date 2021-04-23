@@ -92,7 +92,7 @@ const app = new Vue({
                 ],
             },
         ],
-        
+        messageAvatar: 'Avatar Image',
     },
     methods: {
 
