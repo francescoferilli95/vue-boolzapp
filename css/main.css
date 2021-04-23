@@ -215,6 +215,63 @@ body {
     background-image: url(../img/mine.jpg);
 }
 
+.wrapper-message-sent {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 20px;
+    padding-right: 50px;
+}
+
+.wrapper-message-sent .message-sent {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #ddfabf;
+}
+
+.message-sent .message-text {
+    padding-left: 5px;
+}
+
+.message-sent .log-sent {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5px;
+    font-size: 12px;
+    color: #cfe0c0;
+}
+
+.wrapper-message-received {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.wrapper-message-received .message-received {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.message-received .message-text {
+    padding-left: 5px;
+}
+
+.message-received .log-received {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5px;
+    font-size: 12px;
+    color: #c5c8ca;
+}
+
 /* FOOTER CONTENT */
 
 .footer-content {
