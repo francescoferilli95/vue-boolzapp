@@ -84,18 +84,12 @@
             </section>
             <!-- MAIN CONTENT -->
             <section class="main-content">
-                <!-- MESSAGE SENT -->
-                <div class="wrapper-message-sent">
-                    <div v-for class="message-sent">
-                        <div class="message-text">asdasd</div>
-                        <div class="log-sent">xdxd</div>
-                    </div>
-                </div>
-                <!-- MESSAGE RECEIVED -->
-                <div class="wrapper-message-received">
-                    <div class="message-received">
-                        <div class="message-text">vasvsa</div>
-                        <div class="log-received">qweqwe</div>
+                <!-- MESSAGES -->
+                <div class="chat-container">
+                    <div v-for="message in users[indexChat].messages"
+                    :class="'message ' + message.status">
+                        <div class="message-text">{{message.message}}</div>
+                        <div class="log">{{message.date}}</div>
                     </div>
                 </div>
             </section>
