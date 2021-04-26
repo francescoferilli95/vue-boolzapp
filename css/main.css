@@ -272,7 +272,7 @@ body {
     justify-content: flex-end;
     padding-right: 5px;
     font-size: 12px;
-    color: #cfe0c0;
+    color: #ccc;
 }
 
 .chat-container .message.sent {

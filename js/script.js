@@ -94,11 +94,22 @@ const app = new Vue({
         ],
         messageAvatar: 'Avatar Image',
         indexChat: 0,
+        newMessage: '',
     },
     methods: {
         showChat(index) {
             this.indexChat = index;
             console.log('Click');
+        },
+        sendMessage() {
+            if (this.newMessage !== '') {
+                this.users[indexChat].messages.push({
+                    message: this.newMessage,
+                    status: 'sent',
+                });
+            }
+
+            this.newMessage = '';
         },
     },
 });
