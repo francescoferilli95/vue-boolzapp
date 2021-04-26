@@ -93,8 +93,12 @@ const app = new Vue({
             },
         ],
         messageAvatar: 'Avatar Image',
+        indexChat: 0,
     },
     methods: {
-
+        showChat(index) {
+            this.indexChat = index;
+            console.log('Click');
+        },
     },
 });

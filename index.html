@@ -56,7 +56,7 @@
             <!-- MAIN SIDE -->
             <section class="main-side">
                 <ul>
-                    <li  v-for="user in users" class="user-chat">
+                    <li  @click="showChat(index)" v-for="(user, index) in users" class="user-chat" :class="{active: index == indexChat}">
                         <img :src="'./img/'+'avatar'+user.avatar+'.jpg'" :alt="messageAvatar">
                         <span>{{user.name}}</span>
                     </li>
@@ -69,9 +69,9 @@
             <section class="header-content">
                 <!-- CHAT NAME -->
                 <div class="chat-name">
-                    <img src="./img/avatar_1.jpg" alt="Avatar 1 Image">
+                    <img  :src="'./img/avatar' + users[indexChat].avatar + '.jpg'" alt="Avatar 1 Image">
                     <div class="chat-info">
-                        <span>Michele</span>
+                        <span>{{users[indexChat].name}}</span>
                         <span class="log">Last log in at 10:35</span>
                     </div>
                 </div>
@@ -86,16 +86,16 @@
             <section class="main-content">
                 <!-- MESSAGE SENT -->
                 <div class="wrapper-message-sent">
-                    <div class="message-sent">
-                        <div class="message-text">Message sent</div>
-                        <div class="log-sent">23/04/2021 13:05</div>
+                    <div v-for class="message-sent">
+                        <div class="message-text">asdasd</div>
+                        <div class="log-sent">xdxd</div>
                     </div>
                 </div>
                 <!-- MESSAGE RECEIVED -->
                 <div class="wrapper-message-received">
                     <div class="message-received">
-                        <div class="message-text">Message received</div>
-                        <div class="log-received">23/04/2021 13:08</div>
+                        <div class="message-text">vasvsa</div>
+                        <div class="log-received">qweqwe</div>
                     </div>
                 </div>
             </section>

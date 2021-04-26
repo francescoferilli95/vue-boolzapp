@@ -163,6 +163,10 @@ body {
     border-bottom: 1px solid #f2f2f2;
 }
 
+.user-chat.active {
+    background: #ccc;
+}
+
 .user-chat:last-child {
     border-bottom: none;
 }
