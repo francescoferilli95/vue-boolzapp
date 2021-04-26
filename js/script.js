@@ -95,6 +95,8 @@ const app = new Vue({
         messageAvatar: 'Avatar Image',
         indexChat: 0,
         newMessage: '',
+        filtering: '',
+        filteredUsers: [],
     },
     methods: {
         showChat(index) {
@@ -119,4 +121,7 @@ const app = new Vue({
             }, 1000);
         },
     },
+    filterUsers() {
+        
+    }
 });
