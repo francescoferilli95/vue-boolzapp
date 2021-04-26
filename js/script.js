@@ -109,6 +109,12 @@ const app = new Vue({
             }
 
             this.newMessage = '';
+            setTimeout(() => {
+                this.users[indexChat].messages.push({
+                    message: 'Ok',
+                    status: 'received',
+                });
+            }, 1000);
         },
     },
 });
