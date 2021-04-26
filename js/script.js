@@ -96,7 +96,6 @@ const app = new Vue({
         indexChat: 0,
         newMessage: '',
         searchUser: '',
-        filteredUsers: [],
     },
     methods: {
         showChat(index) {
@@ -125,7 +124,7 @@ computed: {
     filterUsers:function()
     {
         let self=this;
-        return this.users.filter( function(custom) {
+        return this.users.filter((custom) => {
             return custom.name.toLowerCase().indexOf(self.searchUser.toLowerCase())>=0;
         })
     }
