@@ -95,7 +95,7 @@ const app = new Vue({
         messageAvatar: 'Avatar Image',
         indexChat: 0,
         newMessage: '',
-        filtering: '',
+        searchUser: '',
         filteredUsers: [],
     },
     methods: {
@@ -121,7 +121,13 @@ const app = new Vue({
             }, 1000);
         },
     },
-    filterUsers() {
-        
+computed: {
+    filterUsers:function()
+    {
+        let self=this;
+        return this.users.filter( function(custom) {
+            return custom.name.toLowerCase().indexOf(self.searchUser.toLowerCase())>=0;
+        })
     }
+}
 });
