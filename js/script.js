@@ -105,6 +105,7 @@ const app = new Vue({
                 this.users[indexChat].messages.push({
                     message: this.newMessage,
                     status: 'sent',
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 });
             }
 
@@ -113,6 +114,7 @@ const app = new Vue({
                 this.users[indexChat].messages.push({
                     message: 'Ok',
                     status: 'received',
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 });
             }, 1000);
         },
