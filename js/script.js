@@ -99,9 +99,8 @@ const app = new Vue({
     methods: {
         showChat(index) {
             this.indexChat = index;
-            console.log('Click');
         },
-        sendMessage() {
+        sendMessage(indexChat) {
             if (this.newMessage !== '') {
                 this.users[indexChat].messages.push({
                     message: this.newMessage,

@@ -101,7 +101,7 @@
                 </div>
                 <!-- CHAT -->
                 <div class="chat">
-                    <input @keyup.enter="sendMessage" v-model.trim="newMessage" type="text" class="chat-input" placeholder="Write a message here">
+                    <input @keyup.enter="sendMessage(indexChat)" v-model.trim="newMessage" type="text" class="chat-input" placeholder="Write a message here">
                 </div>
                 <!-- AUDIO -->
                 <div class="audio">
