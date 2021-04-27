@@ -50,13 +50,13 @@
                     <i class="fas fa-search"><a href="#"></a></i>
                 </div>
                 <div class="search-input">
-                    <input @keyup="filterUsers" v-model.trim="search" type="text" class="search-text" placeholder="Search or start a new chat">
+                    <input type="text" class="search-text" placeholder="Search or start a new chat" v-model.trim="searchModel" @keyup="search">
                 </div>
             </section>
             <!-- MAIN SIDE -->
             <section class="main-side">
                 <ul>
-                    <li  v-for="(user, index) in users" @click="showChat(index)"  class="user-chat" :class="{active: index == indexChat}">
+                    <li  v-for="(user, index) in users" v-show="user.visible == true" @click="showChat(index)"  :key="index + '-' + user.avatar" class="user-chat" :class="{active: index == indexChat}">
                         <img :src="'./img/'+'avatar'+user.avatar+'.jpg'" :alt="messageAvatar">
                         <span>{{user.name}}</span>
                     </li>

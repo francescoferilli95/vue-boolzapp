@@ -95,7 +95,8 @@ const app = new Vue({
         messageAvatar: 'Avatar Image',
         indexChat: 0,
         newMessage: '',
-        search: '',
+        searchModel: "",
+        filteredContacts: [],
     },
     methods: {
         showChat(index) {
@@ -119,24 +120,24 @@ const app = new Vue({
                 });
             }, 1000);
         },
-    },
-    filterUsers() {
-
-        this.users.forEach((user) => {
-
-        var custom = user.name.toLowerCase().includes((this.search).toLowerCase())
-
-        if (this.search !== '') {
-            if (!custom) {
-                user.visible = false;
-            } else {
-                user.visible = true;
-            }
-        } else {
-            user.visible = true;
+        search() {
+            this.users.forEach(user => {
+                if (!user.name.toLowerCase().includes(this.searchModel.toLowerCase())) {
+                    user.visible = false
+                } else {
+                    user.visible = true
+                }
+            });
         }
-
-        });
-
     },
 });
+
+/*
+computed: {
+    filterUsers: function() {
+        let self = this;
+        return this.users.filter(function (custom) {
+            return custom.name.toLowerCase().indexOf(self.search.toLowerCase()) >= 0;
+        })
+    }
+    filteredUsers: [],*/
